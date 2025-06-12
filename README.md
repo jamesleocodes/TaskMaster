@@ -1,6 +1,9 @@
 # Learning Progress Tracker
 
+![Learning Progress Tracker Interface](taskmaster.png)
 A Flask-based web application designed to help you monitor and track your daily learning activities and progress. This tool helps you stay organized and motivated in your learning journey by keeping track of your tasks, their completion status, and progress over time.
+
+
 
 ## Features
 
