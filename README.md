@@ -1,13 +1,14 @@
-# Flask Task Manager
+# Learning Progress Tracker
 
-A simple and elegant task management web application built with Flask and SQLite.
+A Flask-based web application designed to help you monitor and track your daily learning activities and progress. This tool helps you stay organized and motivated in your learning journey by keeping track of your tasks, their completion status, and progress over time.
 
 ## Features
 
-- Create new tasks
-- View all tasks with their creation dates
-- Update existing tasks
-- Delete tasks
+- Create and manage learning tasks
+- Track completion status of learning activities
+- Monitor your daily learning progress
+- Update and modify learning goals
+- Delete completed or outdated tasks
 - Track task status (In Progress/Completed)
 - Toggle task status with one click
 - Color-coded status indicators
@@ -58,7 +59,7 @@ http://localhost:5000
 
 ## Usage
 
-- **Add a Task**: Enter task description in the input field and click "Add Task"
+- **Add a Learning Task**: Enter your learning activity or goal in the input field and click "Add Task"
 - **Update a Task**: Click the "Update" link next to the task you want to modify
   - You can change both the task content and status
 - **Delete a Task**: Click the "Delete" link next to the task you want to remove
@@ -67,8 +68,8 @@ http://localhost:5000
 ## Task Status
 
 The application supports two task statuses:
-- **In Progress** (default): Yellow badge indicating active tasks
-- **Completed**: Green badge indicating finished tasks
+- **In Progress** (default): Yellow badge indicating active learning tasks
+- **Completed**: Green badge indicating finished learning activities
 
 ## Project Structure
 
@@ -90,7 +91,7 @@ The application supports two task statuses:
 
 The Todo table includes the following fields:
 - `id`: Primary key
-- `content`: Task description
+- `content`: Learning task description
 - `date_created`: Creation timestamp
 - `status`: Task status (In Progress/Completed)
 
