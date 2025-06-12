@@ -1,5 +1,6 @@
 from app import app, db
 
 with app.app_context():
-    db.create_all()
-    print("Database tables created successfully!") 
+    db.drop_all()  # Drop all existing tables
+    db.create_all()  # Create new tables with updated schema
+    print("Database tables recreated successfully!") 

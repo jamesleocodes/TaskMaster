@@ -8,6 +8,9 @@ A simple and elegant task management web application built with Flask and SQLite
 - View all tasks with their creation dates
 - Update existing tasks
 - Delete tasks
+- Track task status (In Progress/Completed)
+- Toggle task status with one click
+- Color-coded status indicators
 - Responsive and clean user interface
 - SQLite database for data persistence
 
@@ -57,7 +60,15 @@ http://localhost:5000
 
 - **Add a Task**: Enter task description in the input field and click "Add Task"
 - **Update a Task**: Click the "Update" link next to the task you want to modify
+  - You can change both the task content and status
 - **Delete a Task**: Click the "Delete" link next to the task you want to remove
+- **Toggle Status**: Click the "Toggle" link next to the status to switch between "In Progress" and "Completed"
+
+## Task Status
+
+The application supports two task statuses:
+- **In Progress** (default): Yellow badge indicating active tasks
+- **Completed**: Green badge indicating finished tasks
 
 ## Project Structure
 
@@ -74,6 +85,14 @@ http://localhost:5000
 └── instance/
     └── test.db         # SQLite database file
 ```
+
+## Database Schema
+
+The Todo table includes the following fields:
+- `id`: Primary key
+- `content`: Task description
+- `date_created`: Creation timestamp
+- `status`: Task status (In Progress/Completed)
 
 ## Technologies Used
 

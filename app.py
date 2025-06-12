@@ -10,6 +10,7 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    status = db.Column(db.String(20), default='In Progress')  # New status column
 
     def __repr__(self):
         return '<Task %r>' % self.id
@@ -36,6 +37,7 @@ def update(id):
     
     if request.method == 'POST':
         task.content = request.form['content']
+        task.status = request.form['status']  # Update status
         try:
             db.session.commit()
             return redirect('/')
@@ -53,6 +55,16 @@ def delete(id):
         return redirect('/')
     except:
         return 'There was a problem deleting that task'
+
+@app.route('/toggle_status/<int:id>')
+def toggle_status(id):
+    task = Todo.query.get_or_404(id)
+    task.status = 'Completed' if task.status == 'In Progress' else 'In Progress'
+    try:
+        db.session.commit()
+        return redirect('/')
+    except:
+        return 'There was a problem updating the status'
 
 if __name__ == "__main__":
     app.run(debug=True)

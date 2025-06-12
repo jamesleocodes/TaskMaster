@@ -64,3 +64,34 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #0052a3;
 }
+
+/* Status styles */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.status-badge.in-progress {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.toggle-status {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}

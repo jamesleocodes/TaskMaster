@@ -14,12 +14,21 @@
         <tr>
             <th>Task</th>
             <th>Added</th>
+            <th>Status</th>
             <th>Actions</th>
         </tr>
         {% for task in tasks %}
         <tr>
             <td>{{ task.content }}</td>
             <td>{{ task.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>
+                <span class="status-badge {{ task.status.lower().replace(' ', '-') }}">
+                    {{ task.status }}
+                </span>
+                <a href="/toggle_status/{{task.id}}" class="toggle-status">
+                    Toggle
+                </a>
+            </td>
             <td>
                 <a href="/delete/{{task.id}}">Delete</a>
                 <br>
